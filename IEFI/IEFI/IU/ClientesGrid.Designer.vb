@@ -38,6 +38,7 @@ Partial Class ClientesGrid
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.IdProvinciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.NomProvincia = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesCollectionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,7 +116,7 @@ Partial Class ClientesGrid
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.IdProvinciaDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.IdProvinciaDataGridViewTextBoxColumn, Me.NomProvincia})
         Me.DataGridView1.DataSource = Me.ClientesCollectionBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 38)
@@ -149,6 +150,13 @@ Partial Class ClientesGrid
         Me.IdProvinciaDataGridViewTextBoxColumn.Name = "IdProvinciaDataGridViewTextBoxColumn"
         Me.IdProvinciaDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'NomProvincia
+        '
+        Me.NomProvincia.DataPropertyName = "NomProvincia"
+        Me.NomProvincia.HeaderText = "NomProvincia"
+        Me.NomProvincia.Name = "NomProvincia"
+        Me.NomProvincia.ReadOnly = True
+        '
         'ClientesGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -176,8 +184,9 @@ Partial Class ClientesGrid
     Friend WithEvents Eliminar As System.Windows.Forms.ToolStripButton
     Friend WithEvents Salir As System.Windows.Forms.ToolStripButton
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents ClientesCollectionBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents IdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents IdProvinciaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ClientesCollectionBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents NomProvincia As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

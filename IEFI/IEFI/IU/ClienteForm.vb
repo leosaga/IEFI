@@ -65,7 +65,13 @@
         Me.Close()
     End Sub
 
-    
+    Private Sub ClienteForm_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'Debe consignar la fuente de datos para ComboBoxProvincia
+        ComboBoxProvincia.DataSource = ProvinciasList.TraerRubros
+        ComboBoxProvincia.DisplayMember = "Provincia"
+        ComboBoxProvincia.ValueMember = "Id"
+        ComboBoxProvincia.SelectedValue = IdProvincia_
+    End Sub
 
 End Class
  

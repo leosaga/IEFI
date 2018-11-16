@@ -38,7 +38,8 @@ Public Class ClientesCollection
         Dim MiDataTable As New DataTable
         Dim MiArticulo As ClienteClass
 
-        ObjBaseDatos.objTabla = "Articulos"
+        'ObjBaseDatos.objTabla = "Articulos"
+        ObjBaseDatos.objTabla = "Clientes"
         MiDataTable = ObjBaseDatos.TraerTodo
 
         For Each dr As DataRow In MiDataTable.Rows
@@ -46,7 +47,8 @@ Public Class ClientesCollection
 
             MiArticulo.Id = CInt(dr("Id"))
             MiArticulo.Nombre = dr("Nombre")
-            MiArticulo.IdProvincia = CInt("IdProvincia")
+            'MiArticulo.IdProvincia = CInt("IdProvincia")
+            MiArticulo.IdProvincia = CInt(dr("IdProvincia"))
 
             Me.Add(MiArticulo)
         Next
@@ -68,9 +70,11 @@ Public Class ClientesCollection
         Dim ObjBaseDatos As New BaseDatosClass
         Dim MiDataTable As New DataTable
         Dim MiArticulo As ClienteClass
-        Dim filtro As String = "IdRubro = " & IdRubro
+        'Dim filtro As String = "IdRubro = " & IdRubro La columna en la tabla se llama IdProvincia
+        Dim filtro As String = "IdProvincia = " & IdRubro
 
-        ObjBaseDatos.objTabla = "Articulos"
+        'ObjBaseDatos.objTabla = "Articulos"
+        ObjBaseDatos.objTabla = "Clientes"
         MiDataTable = ObjBaseDatos.TraerFiltrado(filtro)
 
         For Each dr As DataRow In MiDataTable.Rows
@@ -119,7 +123,7 @@ Public Class ClientesCollection
 
         'Instancio el el Objeto BaseDatosClass para acceder al la base personas.
         Dim objBaseDatos As New BaseDatosClass
-        objBaseDatos.objTabla = "clientes"
+        objBaseDatos.objTabla = "Clientes"
 
         'Ejecuta el método base eliminar.
         Dim resultado As Boolean

@@ -38,9 +38,17 @@
             IdProvincia_ = value
         End Set
     End Property
+
+    'Esta es la forma correcta de acceder al nombre de la provincia.
     Public ReadOnly Property NomProvincia()
         Get
-            Return Nombre_
+            For Each provin As ProvinciaClass In ProvinciasList
+                If provin.Id = IdProvincia_ Then
+                    NomProvincia_ = provin.Provincia
+                    Exit For
+                End If
+            Next
+            Return NomProvincia_
         End Get
     End Property
 

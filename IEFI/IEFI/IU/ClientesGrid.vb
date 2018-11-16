@@ -70,9 +70,19 @@
     End Sub
 
     Private Sub ClientesGrid_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        ComboBox.DataSource = ProvinciasList.TraerRubros
+        'ComboBox.DataSource = ProvinciasList.TraerRubros
+        'Debe asignar la fuente de datos al bindingsource para se llene con datos.
+        ClientesCollectionBindingSource.DataSource = ClientesList.TraerArticulos
+        'Se debe llenar provinciasList para que se muestre en la columna nombre de provincia.
+        ProvinciasList.TraerRubros()
+
         If DataGridView1.Rows.Count > 0 Then
             DataGridView1.Rows(0).Selected = True
         End If
     End Sub
+
+    Private Sub Salir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Salir.Click
+        Me.Close()
+    End Sub
+
 End Class

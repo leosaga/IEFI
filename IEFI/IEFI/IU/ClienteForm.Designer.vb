@@ -61,7 +61,7 @@ Partial Class ClienteForm
         '
         'Aceptar
         '
-        Me.Aceptar.Location = New System.Drawing.Point(57, 189)
+        Me.Aceptar.Location = New System.Drawing.Point(212, 120)
         Me.Aceptar.Name = "Aceptar"
         Me.Aceptar.Size = New System.Drawing.Size(75, 23)
         Me.Aceptar.TabIndex = 3
@@ -70,7 +70,7 @@ Partial Class ClienteForm
         '
         'Cancelar
         '
-        Me.Cancelar.Location = New System.Drawing.Point(168, 189)
+        Me.Cancelar.Location = New System.Drawing.Point(313, 120)
         Me.Cancelar.Name = "Cancelar"
         Me.Cancelar.Size = New System.Drawing.Size(75, 23)
         Me.Cancelar.TabIndex = 4
@@ -81,14 +81,14 @@ Partial Class ClienteForm
         '
         Me.TextBoxId.Location = New System.Drawing.Point(120, 24)
         Me.TextBoxId.Name = "TextBoxId"
-        Me.TextBoxId.Size = New System.Drawing.Size(123, 20)
+        Me.TextBoxId.Size = New System.Drawing.Size(75, 20)
         Me.TextBoxId.TabIndex = 5
         '
         'TextBoxNombre
         '
         Me.TextBoxNombre.Location = New System.Drawing.Point(120, 51)
         Me.TextBoxNombre.Name = "TextBoxNombre"
-        Me.TextBoxNombre.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxNombre.Size = New System.Drawing.Size(268, 20)
         Me.TextBoxNombre.TabIndex = 6
         '
         'ComboBoxProvincia
@@ -96,14 +96,14 @@ Partial Class ClienteForm
         Me.ComboBoxProvincia.FormattingEnabled = True
         Me.ComboBoxProvincia.Location = New System.Drawing.Point(120, 83)
         Me.ComboBoxProvincia.Name = "ComboBoxProvincia"
-        Me.ComboBoxProvincia.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBoxProvincia.Size = New System.Drawing.Size(268, 21)
         Me.ComboBoxProvincia.TabIndex = 7
         '
         'ClienteForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.ClientSize = New System.Drawing.Size(423, 170)
         Me.Controls.Add(Me.ComboBoxProvincia)
         Me.Controls.Add(Me.TextBoxNombre)
         Me.Controls.Add(Me.TextBoxId)
