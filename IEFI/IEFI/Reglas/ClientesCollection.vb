@@ -49,7 +49,8 @@ Public Class ClientesCollection
             MiArticulo.Nombre = dr("Nombre")
             'MiArticulo.IdProvincia = CInt("IdProvincia")
             MiArticulo.IdProvincia = CInt(dr("IdProvincia"))
-
+            MiArticulo.Fecha = dr("Fecha")
+            MiArticulo.Saldo = dr("Saldo")
             Me.Add(MiArticulo)
         Next
 
@@ -83,7 +84,8 @@ Public Class ClientesCollection
             MiArticulo.Id = CInt(dr("Id"))
             MiArticulo.Nombre = dr("Nombre")
             MiArticulo.IdProvincia = CInt(dr("IdProvincia"))
-
+            MiArticulo.Fecha = dr("Fecha")
+            MiArticulo.Saldo = dr("Saldo")
             Me.Add(MiArticulo)
         Next
 
@@ -104,6 +106,8 @@ Public Class ClientesCollection
 
         vsql.Append(" VALUES ")
 
+        vsql.Append("('" & MiArticulo.Fecha & "'")
+        vsql.Append("('" & MiArticulo.Saldo & "'")
         vsql.Append("('" & MiArticulo.Nombre & "'")
         vsql.Append(", '" & MiArticulo.IdProvincia & "')")
 
@@ -183,6 +187,8 @@ Public Class ClientesCollection
         Dim vSQL As New StringBuilder
         Dim vResultado As Boolean = False
 
+        vSQL.Append("fecha='" & MiArticulo.Fecha & "'")
+        vSQL.Append("Saldo='" & MiArticulo.Saldo & "'")
         vSQL.Append("Nombre='" & MiArticulo.Nombre & "'")
         vSQL.Append(",IdProvincia='" & MiArticulo.IdProvincia.ToString & "'")
 

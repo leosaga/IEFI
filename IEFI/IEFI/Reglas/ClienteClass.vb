@@ -3,6 +3,8 @@
 
     Dim Id_, IdProvincia_ As Integer
     Dim Nombre_, NomProvincia_ As String
+    Dim Fecha_ As Date
+    Dim Saldo_ As Decimal
 
     ''' <summary>
     ''' Propiedad Id para leer y escribir Id_
@@ -16,6 +18,23 @@
             Id_ = value
         End Set
     End Property
+    Public Property Fecha() As Date
+        Get
+            Return Fecha_
+        End Get
+        Set(ByVal value As Date)
+            Fecha_ = value
+        End Set
+    End Property
+    Public Property Saldo() As Decimal
+        Get
+            Return Saldo_
+        End Get
+        Set(ByVal value As Decimal)
+            Saldo_ = value
+        End Set
+    End Property
+
 
     ''' <summary>
     ''' Propiedad Descripcion para leer y escribir Descripcion_
